@@ -1,4 +1,5 @@
 {
+  "homepage": "http://karem-helany.github.io/dynamotion",
   "name": "dynamotion",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +13,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "node node_modules/react-scripts/bin/react-scripts start",
     "build": "node node_modules/react-scripts/bin/react-scripts build",
     "test": "node node_modules/react-scripts/bin/react-scripts test",
@@ -34,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
