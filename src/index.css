@@ -1,13 +1,653 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: montserrat;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
+
+a {
+    text-decoration: none;
+    color: #0000ee;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+body .countainer .feedback {
+    padding: 20px 75px;
+}
+
+body .countainer .GrayMatter {
+    padding: 20px 75px;
+}
+
+body .countainer .Landing {
+    padding: 75px;
+}
+
+body .countainer .Manufacturers {
+    padding: 0 75px;
+}
+
+body .countainer .robotos {
+    padding: 0 75px;
+}
+
+body .countainer .video {
+    padding: 0 75px;
+}
+
+body .countainer .demo {
+    margin: 60px 0px;
+    padding: 0 75px;
+}
+
+/* start navbar */
+.navbar .navbarEnd {
+    position: relative;
+    right: 73px;
+}
+
+.navbar .navbarStart {
+    position: relative;
+    left: 73px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #2E2E2E;
+    padding: 15px 0;
+}
+
+.navbar .navbarStart img {
+    height: 49px;
+    width: 286px;
+}
+
+.navbar .navbarEnd ul {
+    display: flex;
+    gap: 50px;
+    color: white;
+}
+
+.navbar .navbarEnd ul li a {
+    font-size: 19px;
+    color: white;
+    font-weight: 500;
+    transition: 200ms;
+}
+
+.navbar .navbarEnd ul li a:hover {
+    color: #d51100;
+}
+
+.navbar .links {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .navbar .navbarEnd {
+        position: relative;
+        right: 25px;
+    }
+
+    .navbar .navbarStart {
+        position: relative;
+        left: 25px;
+    }
+
+    body .countainer .feedback {
+        margin: 60px 0;
+        padding: 20px 10px;
+    }
+
+    body .countainer .GrayMatter {
+        margin: 60px 0;
+        padding: 20px 10px;
+    }
+
+    body .countainer .Landing {
+        margin: 60px 0;
+        padding: 0 10px;
+    }
+
+    body .countainer .Manufacturers {
+        margin: 90px 0;
+        padding: 0 10px;
+    }
+
+    body .countainer .robotos {
+        margin: 60px 0;
+        padding: 0 10px;
+    }
+
+    body .countainer .video {
+        margin: 60px 0px;
+        padding: 0 10px;
+    }
+
+    body .countainer .demo {
+        margin: 60px 0px;
+        padding: 0 10px;
+    }
+
+    .navbar .navbarEnd ul a {
+        display: none;
+    }
+
+    .navbar .links {
+        position: relative;
+        display: block;
+        padding-left: 40px;
+    }
+
+    .navbar .links:hover .icon span:nth-child(2) {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .navbar .links .icon {
+        width: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .navbar .links .icon span {
+        background-color: white;
+        margin-bottom: 5px;
+        height: 2px;
+    }
+
+    .navbar .links .icon span:first-child {
+        width: 100%;
+    }
+
+    .navbar .links .icon span:nth-child(2) {
+        width: 60%;
+        transition: all 300ms;
+    }
+
+    .navbar .links .icon span:nth-child(3) {
+        width: 100%;
+    }
+
+    .navbar .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f6f6;
+        position: absolute;
+        right: 0;
+        top: calc(100% + 15px);
+        min-width: 200px;
+        display: none;
+        z-index: 1;
+    }
+
+    .navbar .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #f6f6f6 transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    .navbar .links:hover ul {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #333;
+        transition: all 400ms;
+    }
+
+    .navbar .links ul li a:hover {
+        padding-left: 30px;
+    }
+
+    .navbar .links ul li:not(:nth-child(4)) a {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar .navbarEnd ul {
+        gap: 0;
+    }
+}
+
+.tarec {
+    color: white;
+    text-decoration: underline;
+}
+
+/* end navbar */
+/* start landing */
+.countainer .landing {
+    padding: 130px 30px 100px 30px;
+}
+
+.countainer .landing .title {
+    color: #d51100;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.countainer .landing .subtitle {
+    color: #2e2e2e;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 35px;
+}
+
+.countainer .landing .subtitle span {
+    line-height: 60px;
+    color: #d51100;
+}
+
+@media (max-width: 767px) {
+    .countainer .landing {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .countainer .landing .title {
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .countainer .landing .subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+
+    .countainer .landing .subtitle span {
+        line-height: 30px;
+        color: #d51100;
+    }
+
+    .countainer .Manufacturers p.title {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .countainer .Manufacturers p.subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+
+    .countainer div.Manufacturers {
+        padding: 40px;
+    }
+
+    .robotos .box ul {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .robotos .cards {
+        flex-wrap: wrap;
+    }
+}
+
+/* end landing */
+/* Start Manufacturers */
+.countainer .Manufacturers .title {
+    color: #d51100;
+    font-size: 45px;
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+}
+
+.countainer .Manufacturers .subtitle {
+    color: #2e2e2e;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* End Manufacturers */
+/* start Robotos */
+.robotos {
+    margin: 100px 0;
+}
+
+.robotos .title {
+    font-size: 2.4rem;
+    font-weight: 300;
+    padding: 0 0 20px 10px;
+}
+
+.robotos .subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6em;
+    padding-left: 10px;
+}
+
+.robotos .box ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 4px solid #ffaa00;
+    border-bottom: 2px solid #ffaa00;
+    border-left: 3px solid #ffaa00;
+    border-right: 3px solid #ffaa00;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.robotos .box ul li {
+    color: rgba(0, 0, 0, 0.856);
+    margin: 0 auto;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.robotos .box ul li i {
+    font-size: 35px;
+    display: inline;
+}
+
+.robotos .box ul li p {
+    display: inline;
+}
+
+.robotos .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.robotos .cards p {
+    position: relative;
+    bottom: 50px;
+    right: 10px;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+}
+
+.robotos .cards div img {
+    width: 230px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.robotos .box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4285F4;
+    padding: 40px;
+    margin-top: 80px;
+}
+
+.robotos .box2 div:nth-child(1) p {
+    color: white;
+    letter-spacing: 0.3px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    display: inline;
+}
+
+.robotos .box2 div:nth-child(2) {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.robotos .box2 div:nth-child(2) button {
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px 40px;
+    border: 0;
+}
+
+/* End Robotos */
+/* start video */
+.countainer .video .title {
+    color: #d51100;
+    font-size: 45px;
+    font-weight: 600;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.countainer .video video {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border: none;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+/* end video */
+/* start GrayMatter */
+.GrayMatter .title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.GrayMatter .cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.GrayMatter .parts {
+    display: inline-block;
+}
+
+.GrayMatter .parts div {
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px 2px #33333310;
+    background-image: linear-gradient(to right, #FEFEFE, #ECECEC);
+    margin: 20px;
+    padding: 10px;
+}
+
+@media (max-width: 767px) {
+    .detalis {
+        font-size: 14px;
+        margin: 0 auto;
+        text-align: center;
+        width: 150px;
+        line-height: 30px;
+    }
+
+    p.copy {
+        font-size: 10px;
+    }
+
+    .robotos .box2 {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .GrayMatter .parts div {
+        text-align: center;
+    }
+
+    .GrayMatter .parts div i {
+        display: block;
+    }
+
+    .countainer .feedback div {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .GrayMatter .cards {
+        flex-wrap: wrap;
+    }
+
+    .countainer .video .title {
+        font-size: 25px;
+    }
+
+}
+
+.GrayMatter .parts div i {
+    font-size: 25px;
+    padding: 0 20px 20px 20px;
+}
+
+.GrayMatter .parts div p {
+    display: inline-block;
+}
+
+/* end GrayMatter */
+/* start Feedback */
+.countainer .feedback {
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.countainer .feedback .title {
+    color: #d51100;
+    font-size: 45px;
+    font-weight: 600;
+    padding: 10px;
+    transition: 100ms all;
+}
+
+.countainer .feedback .subtitle {
+    color: #2e2e2e;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 35px;
+    padding: 10px 0;
+}
+
+/* .countainer .feedback .boxsCountainer  */
+
+.countainer .feedback .boxsCountainer .boxs {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.countainer .feedback .boxsCountainer .boxs .box {
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    padding: 20px;
+    border-radius: 7px;
+    transition: 200ms all;
+    background-color: #2e2e2e;
+}
+
+.countainer .feedback .boxsCountainer .boxs #box2 {
+    width: 510px;
+}
+
+.countainer .feedback .boxsCountainer .boxs .box:hover {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.countainer .feedback .boxsCountainer .boxs .box .name {
+    color: #d51100;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.countainer .feedback .boxsCountainer .boxs .box .location {
+    color: #eee;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.countainer .feedback .boxsCountainer .boxs .box .text {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* End Feddback */
+/* start form */
+/* end form */
+/* start fotter */
+.fotter {
+    background-color: #2E2E2E;
+    padding: 20px 50px;
+    margin: 0;
+    color: white;
+    line-height: 30px;
+}
+
+.fotterContainer {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.fotter a {
+    color: white;
+    text-decoration: underline;
+}
+
+.fotter img {
+    width: 400px;
+}
+
+.copy {
+    font-size: 12px;
+}
+
+.fotter span {
+    width: 2px;
+    height: 120px;
+    background-color: white;
+    margin: 0 20px;
+}
+
+/* end fotter */
