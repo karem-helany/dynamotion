@@ -18,8 +18,8 @@ function App() {
         <Robots />
         <Video />
         <Feedback />
-        <Fotter />
       </div>
+      <Fotter />
     </>
   );
 }

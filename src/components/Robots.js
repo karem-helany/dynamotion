@@ -10,37 +10,9 @@ import img8 from '../images/Dynamotion_Images-08.png'
 const Robots = () => {
     return (
         <div className="robotos" id='Robots'>
-            {/* <p className="title">
-                Free Your Workforce <br />
-                and Let Robots Do It
-            </p>
-            <p className="subtitle">
-                With GrayMatter Robotics’ proprietary GMR-AI™ rapidly automate your high-mix, high-variability manufacturing surface finishing needs.
-            </p>
-            <div className="box">
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-brain"></i>
-                        <p>Autonomous <br /> Operation</p>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-hand-lizard"></i>
-                        <p>Superhuman <br /> Performance</p>
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-clock"></i>
-                        <p>24/7 Support</p>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-chart-line"></i>
-                        <p>Instant ROI</p>
-                    </li>
-                </ul>
-            </div> */}
             <div className="cards">
                 <div>
                     <img src={img1} alt="img" />
-
                 </div>
                 <div>
                     <img src={img2} alt="img" />
@@ -73,17 +45,6 @@ const Robots = () => {
 
                 </div>
             </div>
-            {/* <div className='box2'>
-                <div>
-                    <p>Explore all of our automated surface treatment solutions</p>
-                </div>
-                <div>
-                    <button>
-                        Go <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-
-            </div> */}
         </div>
     )
 }

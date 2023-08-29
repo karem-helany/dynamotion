@@ -5,10 +5,10 @@ const landing = () => {
             <p className="subtitle">
                 You are invited to see us at the ATX Exhibition, <br />
                 where we will be presenting our new automotive bin picking <br />
-                application in partnership with Mech-Mind and Epson Canada.. <br />
-                <span>
+                solution  in partnership with Mech-Mind and Epson Canada.. <br />
+                <p>
                     From November 07, 2023 until November 09, 2023 <br />
-                </span>
+                </p>
                 At <br />
                 <a href="https://www.cantonfair.net/location/12168-toronto-the-toronto-congress-centre-ontario-canada" target="_blanc">
                     Toronto - The Toronto Congress Centre, Ontario, Canada
