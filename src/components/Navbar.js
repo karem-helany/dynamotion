@@ -42,28 +42,18 @@ let Navbar = () => {
                                             About us
                                         </a>
                                     </li>
-                                    {/* <li>
-                                <a href="#Robots">
-                                    Robots
-                                </a>
-                            </li> */}
                                     <li>
                                         <a href="#Video">
                                             Video
                                         </a>
                                     </li>
-                                    {/* <li>
-                                <a href="#GrayMatter">
-                                    GrayMatter
-                                </a>
-                            </li> */}
                                     <li>
                                         <a href="#Feedback">
-                                            Our Work
+                                            Our work
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#Demo">
+                                        <a href="#fotter">
                                             Contact
                                         </a>
                                     </li>
